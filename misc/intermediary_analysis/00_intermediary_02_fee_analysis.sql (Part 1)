@@ -1,0 +1,17 @@
+-- Script Name: 00_intermediary_02_fee_analysis.sql (Part 1)
+-- Purpose: Calculates the total transaction fees (in USD) paid per exchange.
+
+SELECT
+    e.name AS exchange_name,
+    COUNT(t.tx_id) AS total_transactions_with_fees_on_exchange, -- Counts txns that had a fee value
+    SUM(COALESCE(t.fee_usd, 0)) AS total_fees_paid_usd_on_exchange
+FROM
+    public.transactions AS t
+JOIN
+    public.exchanges AS e ON t.exchange_id = e.exchange_id
+WHERE
+    t.fee_usd IS NOT NULL AND t.fee_usd > 0 -- Consider only transactions where a fee was recorded
+GROUP BY
+    e.name
+ORDER BY
+    total_fees_paid_usd_on_exchange DESC;

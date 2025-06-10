@@ -1,0 +1,1 @@
+CREATE INDEX IF NOT EXISTS idx_hp_crypto_id_pricedate_desc ON public.historical_prices (crypto_id, price_date DESC);

@@ -1,0 +1,8 @@
+category_id,name,description
+1,Trading,Short to medium-term trading activities
+2,Long-term Holding,Long-term investment positions (1+ year horizon)
+3,Staking Rewards,Income from staking cryptocurrencies
+4,DeFi Yield,Yield farming and liquidity provision rewards
+5,Mining,Cryptocurrency mining operations
+6,Airdrops,Free tokens received from airdrops
+7,Transfer,Moving assets between wallets/exchanges

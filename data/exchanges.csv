@@ -1,0 +1,8 @@
+exchange_id,name,exchange_type
+1,Coinbase Pro,EXCHANGE
+2,Binance,EXCHANGE
+3,Kraken,EXCHANGE
+4,Ledger Wallet,WALLET
+5,MetaMask,WALLET
+6,Celsius,OTHER
+7,FTX,EXCHANGE
